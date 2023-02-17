@@ -15,6 +15,9 @@ public class CustomeQueue {
 		this.rear = -1;
 		this.queueArray = new int[inialSize];
 	}
+	
+	
+	//------------enQueue---------------------
 
 	public void enQueue(int val) {
 		if (isFull()) {
@@ -29,6 +32,9 @@ public class CustomeQueue {
 			queueArray[++rear] = val;
 		}
 	}
+	
+	
+	//-----------------deQueue-------------------------
 
 	public int deQueue() throws EmptyQueueException {
 		if (isEmpty()) {
@@ -47,6 +53,8 @@ public class CustomeQueue {
 
 		}
 	}
+	
+	//---------------Display--------------------
 
 	public void display() throws EmptyQueueException {
 		if (!isEmpty()) {
@@ -67,27 +75,29 @@ public class CustomeQueue {
 		return rear == size - 1;
 	}
 
-	public static void main(String[] args) throws EmptyQueueException {
-		CustomeQueue queue = new CustomeQueue(5);
+	
+	
+// 	public static void main(String[] args) throws EmptyQueueException {
+// 		CustomeQueue queue = new CustomeQueue(5);
 
-//		System.out.println(queue.isEmpty());
-//		System.out.println(queue.isFull());
+// //		System.out.println(queue.isEmpty());
+// //		System.out.println(queue.isFull());
 
-		queue.enQueue(1);
+// 		queue.enQueue(1);
 
-		queue.enQueue(2);
-		queue.enQueue(3);
-		queue.enQueue(4);
-		queue.enQueue(5);
+// 		queue.enQueue(2);
+// 		queue.enQueue(3);
+// 		queue.enQueue(4);
+// 		queue.enQueue(5);
 
-		queue.display();
+// 		queue.display();
 
-		queue.deQueue();
-		System.out.println();
-		queue.display();
+// 		queue.deQueue();
+// 		System.out.println();
+// 		queue.display();
 
-		System.out.println();
+// 		System.out.println();
 
-	}
+// 	}
 
 }
