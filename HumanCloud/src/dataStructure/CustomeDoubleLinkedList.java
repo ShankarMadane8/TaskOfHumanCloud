@@ -44,6 +44,7 @@ public class CustomeDoubleLinkedList {
 			}
 			size++;
 		}
+	
 		
 		//---------addinbegining---------------------
 		
@@ -62,6 +63,8 @@ public class CustomeDoubleLinkedList {
 			size++;
 		}
 		
+	
+	
 		
 		//--------display forward-----------------------
 		
@@ -81,6 +84,8 @@ public class CustomeDoubleLinkedList {
 			
 		}
 		
+	
+	
 		//------------display backword direction----------------
 		
 		public void displayBackword() throws EmptyDoubleLinkedListException {
@@ -104,6 +109,7 @@ public class CustomeDoubleLinkedList {
 		}
 		
 		
+	
 		//--------------delete in forwards------------
 		
 		public void deleteForward() throws  EmptyDoubleLinkedListException {
@@ -114,6 +120,7 @@ public class CustomeDoubleLinkedList {
 			head.pre=null;
 		    size--;
 		}
+	
 		
 		
 		//---------delete forward uing index-----------
@@ -149,6 +156,8 @@ public class CustomeDoubleLinkedList {
 				
 			}
 		}
+	
+	
 		
 		//---------delete in backword----------------
 		
@@ -167,43 +176,28 @@ public class CustomeDoubleLinkedList {
 		}
 		
 		
-		//-------------------------------------------
+	
+	
+		//------------------Main method-------------------------
 		
-		public static void main(String[] args) throws Exception {
-			CustomeDoubleLinkedList l=new CustomeDoubleLinkedList();
-			l.addInEnd(1);
-			l.addInEnd(2);
-			l.addInEnd(4);
-			l.addInEnd(5);
-			l.displayForward();
-			l.displayBackword();
-			System.out.println("----------");
-			l.deleteForward(4);
-			l.displayForward();
-			l.displayBackword();
+// 		public static void main(String[] args) throws Exception {
+// 			CustomeDoubleLinkedList l=new CustomeDoubleLinkedList();
+// 			l.addInEnd(1);
+// 			l.addInEnd(2);
+// 			l.addInEnd(4);
+// 			l.addInEnd(5);
+// 			l.displayForward();
+// 			l.displayBackword();
+// 			System.out.println("----------");
+// 			l.deleteForward(4);
+// 			l.displayForward();
+// 			l.displayBackword();
 			
-			l.addInBegining(5);
-			l.displayForward();
-			l.displayBackword();
-			System.out.println("-----");
-			l.deleteInBackword();
-			l.deleteInBackword();
-			l.deleteInBackword();
-			l.deleteInBackword();
+// 			l.addInBegining(5);
+// 			l.displayForward();
+// 			l.displayBackword();	
 			
-			l.displayForward();
-			l.displayBackword();
-			
-			l.addInEnd(1);
-			l.displayForward();
-			l.displayBackword();
-			
-			
-			
-		
-			
-			
-		}
+// 		}
 			
 	
 
