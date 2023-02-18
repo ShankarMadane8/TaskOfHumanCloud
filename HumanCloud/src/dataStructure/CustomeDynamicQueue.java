@@ -7,8 +7,8 @@ public class CustomeDynamicQueue {
 	
 	private int dynamicSize;
 	private int rear;
-    private int front;
-    public int[] queueArray;
+        private int front;
+        public int[] queueArray;
     
     
     public CustomeDynamicQueue(int inialSize) {
@@ -19,6 +19,8 @@ public class CustomeDynamicQueue {
 	}
     
     
+	
+	//---------------enQueue-------------------------------
     
     public void enQueue(int val) {
     	if(isFull()) {
@@ -34,9 +36,10 @@ public class CustomeDynamicQueue {
     		queueArray[++rear]=val;		 		
     	}
     }
+	
     
     
-    
+    //--------------deQueue-----------------------
     
     public int deQueue() throws EmptyQueueException  {
     	if(isEmpty()) {
@@ -56,8 +59,12 @@ public class CustomeDynamicQueue {
     	}
     }
     
+	
+		
+	
     
-    
+    //----------Display Value-------------------------
+	
     public void display() throws EmptyQueueException  {
     	
     	
@@ -75,8 +82,8 @@ public class CustomeDynamicQueue {
     }
     
     
-    
-    public void resize(int newDynamicSize) {
+    //-----------------------Resize Method------------------------
+       public void resize(int newDynamicSize) {
 		int[] newQueueArray=new int[newDynamicSize];
 		for(int i=0;i<queueArray.length;i++) {
 			newQueueArray[i]=queueArray[i];
@@ -86,26 +93,38 @@ public class CustomeDynamicQueue {
 		
 	}
 
-
+        
+	
+	//---------------------isEmpty Method------------------------
 
 	public boolean isEmpty() {
-    	return front==-1;
-    }
+    	    return front==-1;
+        }
     
-    public boolean isFull() {
-    	return rear==dynamicSize-1;
-    }
+	
+	//------------------isFull Method----------------------------
+       public boolean isFull() {
+    	    return rear==dynamicSize-1;
+       }
     
-  
-    public static void main(String[] args) throws EmptyQueueException {
-		CustomeDynamicQueue stack=new CustomeDynamicQueue(2);
-		stack.enQueue(1);
-		stack.enQueue(2);
-		stack.enQueue(3);
-		stack.enQueue(4);
-		stack.display();
+	
+	
+	
 		
-	}
+	
+	
+	//-------------------Main Method-----------------
+  
+//     public static void main(String[] args) throws EmptyQueueException {
+// 		CustomeDynamicQueue stack=new CustomeDynamicQueue(2);
+// 		stack.enQueue(1);
+// 		stack.enQueue(2);
+// 		stack.enQueue(3);
+// 		stack.enQueue(4);
+// 		stack.display();
+		
+// 	}
     
+	
 
 }
