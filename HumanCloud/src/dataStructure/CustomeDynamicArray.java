@@ -16,6 +16,10 @@ public class CustomeDynamicArray {
 		this.size=0;
 	}
     
+	
+	
+    //--------------append Method-------------------
+	
     public void append(int val) {
     	if(size<array.length) {
     		array[size++]=val;
@@ -27,6 +31,9 @@ public class CustomeDynamicArray {
     		
     	}
     }
+	
+   
+    //----------------resize-----------------------------
     
     public void resize(int dynamicSize) {
     	int[] newArray=new int[dynamicSize];
@@ -37,6 +44,7 @@ public class CustomeDynamicArray {
     }
     
     
+   //---------------Delete-------------------------
     
     public void delete() throws EmptyArrayException {
     	if(size==0) {
@@ -51,6 +59,8 @@ public class CustomeDynamicArray {
     	}
     }
     
+	
+   //--------------delete value using  index------------------------
     
     public void delete(int index) throws EmptyArrayException {
     	if(index>size) {
@@ -68,7 +78,7 @@ public class CustomeDynamicArray {
     }
     
     
-    
+    //---------------display Method------------------------
     
     public void dispaly() throws EmptyArrayException {
     	if(size==0) {
@@ -79,22 +89,29 @@ public class CustomeDynamicArray {
     	}
     	System.out.println();
     }
+	
+	
+	
+	
+	
+	//-------------main Method-------------------------------
+	
     
-    public static void main(String[] args) throws EmptyArrayException {
-		CustomeDynamicArray array=new CustomeDynamicArray();
-		array.append(1);
-		array.append(2);
-		array.append(3);
-		array.append(4);
+//     public static void main(String[] args) throws EmptyArrayException {
+// 		CustomeDynamicArray array=new CustomeDynamicArray();
+// 		array.append(1);
+// 		array.append(2);
+// 		array.append(3);
+// 		array.append(4);
 			
-		array.dispaly();
-		array.delete();
-		array.delete();
-		array.delete();
-		array.delete();
-	    array.dispaly();
+// 		array.dispaly();
+// 		array.delete();
+// 		array.delete();
+// 		array.delete();
+// 		array.delete();
+// 	    array.dispaly();
 		
-	}
+// 	}
     
 
 }
