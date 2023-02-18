@@ -18,9 +18,12 @@ public class CustomeLinkedList {
 		}		
 	}
 	
-	//----------------------------------------------------
 	
-	//insert Node Val 1n
+	
+	
+	//-------------------Insert Value---------------------------------
+	
+	
 	public  Node insert(int val) {  
 		Node node=new Node(val);		
 //		node.next=head;
@@ -38,7 +41,7 @@ public class CustomeLinkedList {
 		return node;
 	}
 	
-	//---------------------------------------------------------------
+	//----------------------Display All value-----------------------------------------
 	
 	//display val
 	public void display() throws EmptyLinkedListException {
@@ -57,7 +60,7 @@ public class CustomeLinkedList {
 	
 	}
 	
-	//------------------------------------------------------------
+	//--------------------------Delete Value----------------------------------
 	
 	// delete val
 	public void delete() throws EmptyLinkedListException {
@@ -71,9 +74,14 @@ public class CustomeLinkedList {
 	}
 	
 	
-	//------------------------------------------------------------
 	
-	//delete val using index
+	
+	
+	
+	
+	//-----------------------delete val using index-------------------------------------
+	
+
    public void delete(int index) throws LinkedListIndexOutOfBoundException, EmptyLinkedListException {
 	   Node temp=head;
 //	   System.out.println("----------- Address of temp and head ----------------");
@@ -117,22 +125,24 @@ public class CustomeLinkedList {
    
    
    
+	
+	
 
    
-   //---------------------------------------------------------------
+   //----------------------------Main Method-----------------------------------
    
    
 	
-	public static void main(String[] args) throws LinkedListIndexOutOfBoundException, EmptyLinkedListException {
-		CustomeLinkedList l=new CustomeLinkedList();
-		l.insert(4);
-		l.insert(5);
-		l.insert(6);
-		l.insert(7);
-		l.delete();
-		l.display();
-		l.delete(2);
-		l.display();					
-	}
+// 	public static void main(String[] args) throws LinkedListIndexOutOfBoundException, EmptyLinkedListException {
+// 		CustomeLinkedList l=new CustomeLinkedList();
+// 		l.insert(4);
+// 		l.insert(5);
+// 		l.insert(6);
+// 		l.insert(7);
+// 		l.delete();
+// 		l.display();
+// 		l.delete(2);
+// 		l.display();					
+// 	}
 
 }
